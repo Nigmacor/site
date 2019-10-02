@@ -1,46 +1,73 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 	<title>
 		{% block title %}
-			OBANA
+			Obana-rus.com
 		{% endblock %}
 	</title>
 </head>
 <body>
 <header>
-  <div class="container-fluid">
-	<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #EDEEF0;border: 1px solid black;">
-		<a class="navbar-brand" href="#">Главная</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a type="button" class="btn btn-outline-secondary" href="#">Форум<span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a type="button" class="btn btn-outline-secondary" href="#">О нас</a>
-				</li>
-				<li class="nav-item">
-					<a type="button" class="btn btn-outline-secondary" href="#">Магазин</a>
-				</li>
-				<li class="nav-item">
-					<a type="button" class="btn btn-outline-secondary" href="#">Калькулятор</a>
-				</li>
-			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search" placeholder="Найти..." aria-label="Search">
-				<button style="border: 1px solid black;" class="btn btn-light my-2 my-sm-0" type="submit">Найти</button>
-			</form>
-		</div>
-	</nav>
+	<div class='nav'>
+  <div class='link'>
+    <div class='prev'>&#xf015;</div>
+    <div class='small'>&#xf015;</div>
+    <div class='full'>
+      <div class='f1'>Главная</div>
+    </div>
+  </div>
+  <div class='link'>
+    <div class='prev'>&#xf07a;</div>
+    <div class='small'>&#xf07a;</div>
+    <div class='full'>
+      <div class='f1'>Магазин</div>
+      <div class='f2'>Все что нужно здесь!</div>
+    </div>
+  </div>
+  <div class='link'>
+    <div class='prev'>&#xf212;</div>
+    <div class='small'>&#xf212;</div>
+    <div class='full'>
+      <div class='f1'>Форум</div>
+      <div class='f2'>Приятно пообщатся!</div>
+    </div>
+  </div>
+  <div class='link'>
+    <div class='prev'>&#xf05a;</div>
+    <div class='small'>&#xf05a;</div>
+    <div class='full'>
+      <div class='f1'>О нас</div>
+      <div class='f2'>Вся информация о сайте!</div>
+    </div>
+  </div>
+  <div class='link'>
+    <div class='prev'>&#xf1ec;</div>
+    <div class='small'>&#xf1ec;</div>
+    <div class='full'>
+      <div class='f1'>Калькулятор</div>
+      <div class='f2'>Тут вы можете рассчитать стоимость!</div>
+    </div>
+  </div>
+  <div class='link'>
+    <div class='prev'>&#xf03e;</div>
+    <div class='small'>&#xf03e;</div>
+    <div class='full'>
+      <div class='f1'>Галерея</div>
+      <div class='f2'>Наши работы!</div>
+    </div>
+  </div>
 </div>
+<br><form style="margin-left: 75%;" class="form-inline my-2 my-lg-0">
+	<input class="form-control mr-sm-2" type="search" placeholder="Найти..." aria-label="Search">
+	<button style="border: 1px solid black;" class="btn btn-light my-2 my-sm-0" type="submit">Найти</button>
+</form>
 </header>
 <section>
   <div class="container">
@@ -52,6 +79,5 @@
 		</main>
 	</div>
   </div>
-  <p class="ddd">a\asdasdfasdfs\df</p>
 </body>
 </html>
