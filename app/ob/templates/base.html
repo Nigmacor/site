@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
 	<title>
 		{% block title %}
 			OBANA
@@ -10,7 +11,9 @@
 	</title>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #e3f2fd;">
+<header>
+  <div class="container-fluid">
+	<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #EDEEF0;border: 1px solid black;">
 		<a class="navbar-brand" href="#">Главная</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -37,12 +40,18 @@
 			</form>
 		</div>
 	</nav>
-
-	<div class="container mt-5">
-	{% block content %}
-		Home page content
-	{% endblock %}
+</div>
+</header>
+<section>
+  <div class="container">
+  	<div class="row">
+  		<main class="col-md-8 col-lg-9">
+			{% block content %}
+				Home page content
+			{% endblock %}
+		</main>
 	</div>
-
+  </div>
+  <p class="ddd">a\asdasdfasdfs\df</p>
 </body>
 </html>
