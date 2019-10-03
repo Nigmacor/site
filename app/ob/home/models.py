@@ -9,6 +9,8 @@ class Orders(models.Model):
 	body = models.TextField(blank=False, db_index=True)
 	date_pud = models.DateTimeField(auto_now_add=True)
 	duration = models.DurationField(default=timedelta(days=7))#длительность тендора
-		
+	clicked = models.BooleanField(default=False)
+	#tag
+
 	def __str__(self):
 		return '{}'.format(self.title)

@@ -1,6 +1,21 @@
 {% extends 'templates/base.html' %}
 
-
-{% block content %}
- 	<h1>hello world!</h1>
+{% block title %}
+ 	home
 {% endblock %}
+<container>
+  {% block content %}
+    <h1 class="md-5">Заказы:</h1>
+    {% for order in orders %}
+      <div class="card">
+        <h5 class="card-header">{{order.title}}</h5>
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">{{order.body}}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+    {% endfor %}
+  {% endblock %}
+</container>
