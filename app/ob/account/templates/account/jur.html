@@ -2,7 +2,61 @@
 {% load static %}
 
 {% block content %}
-	content
+	<form style="margin-top: 5%" class="px-5 py-5">
+<div style="width: 50%;float:left;">
+    <div class="col-md-9 mb-3">
+        <label for="inputAddress">Ваш номер телефона</label>
+        <input type="text" class="form-control" id="inputmobil" placeholder="Номер">
+    </div>
+    <div class="col-md-9 mb-3">
+        <label for="inputAddress">Ваш адрес</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="Адрес">
+    </div>
+    <div class="col-md-9 mb-3">
+      <label for="exampleDropdownFormEmail1">Введите email</label>
+      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@mail.ru">
+    </div>
+    <div class="col-md-9 mb-3">
+      <label for="validationCustom01">Название организации</label>
+      <input type="text" class="form-control" id="validationCustom01" placeholder="Название" required>
+    </div>
+    <div class="col-md-9 mb-3">
+      <label for="validationCustom01">ОГРНИП</label>
+      <input title="Введите если у вас ИП" type="text" class="form-control" id="validationCustom01" placeholder="ОГРНИП" required>
+    </div>
+    </div>
+    <div style="width: 50%;float:right;">
+    <div class="col-md-9 mb-3">
+      <label for="validationCustom01">КПП</label>
+      <input title="Введите если у вас OOO" type="text" class="form-control" id="validationCustom01" placeholder="КПП" required>
+    </div>
+    <div class="col-md-9 mb-3">
+      <label for="validationCustom01">ИНН</label>
+      <input type="text" class="form-control" id="validationCustom01" placeholder="ИНН" required>
+    </div>
+    <div class="col-md-9 mb-3">
+      <label for="exampleDropdownFormPassword1">Введите пароль</label>
+      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Пароль">
+    </div>
+    <div class="col-md-9 mb-3">
+      <label for="exampleDropdownFormPassword1">Введите пароль еще раз</label>
+      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Пароль">
+    </div>
+    </div>
+    <div style="float:center;margin-top: 45%">
+    <div class="form-group">
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="dropdownCheck">
+        <label class="form-check-label" for="dropdownCheck">
+          Запомнить меня
+        </label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-outline-dark">Зарегистрироватся!</button>
+    </div>
+  </form>
+  <div class="dropdown-divider"></div>
+  <a class="dropdown-item" href="{% url 'autorisation' %}">Вы уже зарегистрированы? Пройди во вкладку входа!</a>
 {% endblock %}
 
 {% block title %}
