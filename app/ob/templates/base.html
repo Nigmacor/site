@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}"/>
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 	<title>
 		{% block title %}
@@ -21,7 +22,7 @@
     </div>
 	{% endblock %}
 	<div class="container11"><a class="border-animation" href="/">
-      <div class="border-animation__inner">obAna</div></a>
+      <div class="border-animation__inner"><p class="a_logo">obAna</p></div></a>
     </div>
 </header>
 <section>
@@ -30,26 +31,33 @@
   		<div style="background-color: #737373;min-height: 100vh;" class="col-md-2 col-lg-2">
 <div style="margin-top: 5%" class="menu">
 <div class="fancy-hover">
+<<<<<<< HEAD
+  <a class="a_menu" href=""><i class="fa fa-home" aria-hidden="true"></i>Главная</a>
+</div>
+<div class="fancy-hover">
+  <a class="a_menu" href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i>Магазин</a>
+=======
   <a href="{% url 'home' %}"><i class="fa fa-home" aria-hidden="true"></i>Главная</a>
 </div>
 <div class="fancy-hover">
   <a href="{% url 'shop' %}"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Магазин</a>
+>>>>>>> 06f6f6344bf58b8dc4ecddcf7ec074278d7f3489
 </div>
 <div class="fancy-hover">
-  <a href=""><i class="fa fa-comments-o" aria-hidden="true"></i>Форум</a>
+  <a class="a_menu" href=""><i class="fa fa-comments-o" aria-hidden="true"></i>Форум</a>
 </div>
 <div class="fancy-hover">
-  <a href=""><i class="fa fa-globe" aria-hidden="true"></i>О нас</a>
+  <a class="a_menu" href=""><i class="fa fa-globe" aria-hidden="true"></i>О нас</a>
 </div>
 <div class="fancy-hover">
-  <a href=""><i class="fa fa-calculator" aria-hidden="true"></i>Калькулятор</a>
+  <a class="a_menu" href=""><i class="fa fa-calculator" aria-hidden="true"></i>Калькулятор</a>
 </div>
 <div class="fancy-hover">
-  <a href=""><i class="fa fa-trash-o" aria-hidden="true"></i>Галерея</a>
+  <a class="a_menu" href=""><i class="fa fa-trash-o" aria-hidden="true"></i>Галерея</a>
 </div>
 </div>
 		</div>
-		<div class="col-md-10 col-lg-10" >
+		<div  align="center" class="col-md-10 col-lg-10" >
 			{% block content %}
 				Home page content
 			{% endblock %}
