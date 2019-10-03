@@ -4,7 +4,6 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="static/css/style.css"/>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 	<title>
@@ -15,68 +14,46 @@
 </head>
 <body>
 <header>
-	<div class='nav'>
-  <div class='link'>
-    <div class='prev'>&#xf015;</div>
-    <div class='small'>&#xf015;</div>
-    <div class='full'>
-      <div class='f1'>Главная</div>
+	{% block autoresation %}
+		<div style="float:right;margin-top: 2%;margin-right: 2%">
+    	<a href="{% url 'autorisation' %}"><button type="button" class="btn btn-outline-dark" >Вход</button></a>
+    	<a href="{% url 'registration' %}"><button type="button" class="btn btn-outline-dark" >Регистрация</button></a>
     </div>
-  </div>
-  <div class='link'>
-    <div class='prev'>&#xf07a;</div>
-    <div class='small'>&#xf07a;</div>
-    <div class='full'>
-      <div class='f1'>Магазин</div>
-      <div class='f2'>Все что нужно здесь!</div>
+	{% endblock %}
+	<div class="container11"><a class="border-animation" href="/">
+      <div class="border-animation__inner">obAna</div></a>
     </div>
-  </div>
-  <div class='link'>
-    <div class='prev'>&#xf212;</div>
-    <div class='small'>&#xf212;</div>
-    <div class='full'>
-      <div class='f1'>Форум</div>
-      <div class='f2'>Приятно пообщатся!</div>
-    </div>
-  </div>
-  <div class='link'>
-    <div class='prev'>&#xf05a;</div>
-    <div class='small'>&#xf05a;</div>
-    <div class='full'>
-      <div class='f1'>О нас</div>
-      <div class='f2'>Вся информация о сайте!</div>
-    </div>
-  </div>
-  <div class='link'>
-    <div class='prev'>&#xf1ec;</div>
-    <div class='small'>&#xf1ec;</div>
-    <div class='full'>
-      <div class='f1'>Калькулятор</div>
-      <div class='f2'>Тут вы можете рассчитать стоимость!</div>
-    </div>
-  </div>
-  <div class='link'>
-    <div class='prev'>&#xf03e;</div>
-    <div class='small'>&#xf03e;</div>
-    <div class='full'>
-      <div class='f1'>Галерея</div>
-      <div class='f2'>Наши работы!</div>
-    </div>
-  </div>
-</div>
-<br><form style="margin-left: 75%;" class="form-inline my-2 my-lg-0">
-	<input class="form-control mr-sm-2" type="search" placeholder="Найти..." aria-label="Search">
-	<button style="border: 1px solid black;" class="btn btn-light my-2 my-sm-0" type="submit">Найти</button>
-</form>
 </header>
 <section>
-  <div class="container">
+  <div class="container-fluid">
   	<div class="row">
-  		<main class="col-md-8 col-lg-9">
+  		<div style="background-color: #737373;min-height: 100vh;" class="col-md-2 col-lg-2">
+<div style="margin-top: 5%" class="menu">
+<div class="fancy-hover">
+  <a href=""><i class="fa fa-home" aria-hidden="true"></i>Главная</a>
+</div>
+<div class="fancy-hover">
+  <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i>Магазин</a>
+</div>
+<div class="fancy-hover">
+  <a href=""><i class="fa fa-comments-o" aria-hidden="true"></i>Форум</a>
+</div>
+<div class="fancy-hover">
+  <a href=""><i class="fa fa-globe" aria-hidden="true"></i>О нас</a>
+</div>
+<div class="fancy-hover">
+  <a href=""><i class="fa fa-calculator" aria-hidden="true"></i>Калькулятор</a>
+</div>
+<div class="fancy-hover">
+  <a href=""><i class="fa fa-trash-o" aria-hidden="true"></i>Галерея</a>
+</div>
+</div>
+		</div>
+		<div class="col-md-10 col-lg-10" >
 			{% block content %}
 				Home page content
 			{% endblock %}
-		</main>
+		</div>
 	</div>
   </div>
 </body>
