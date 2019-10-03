@@ -7,3 +7,9 @@ def registration(request):
 
 def autorisation(request):
 	return render(request, 'account/login.html')
+
+def regphis(request):
+	return render(request, 'account/phis.html')
+
+def regjur(request):
+	return render(request, 'account/jur.html')
