@@ -15,11 +15,11 @@
 </head>
 <body>
 <header>
-	{% block autoresation %}
+	{% block autorisation %}
 		<div style="float:right;margin-top: 2%;margin-right: 2%">
     	<button type="button" class="btn btn-outline-dark">Вход</button>
     	<button type="button" class="btn btn-outline-dark">Регистрация</button>
-    </div>
+    	</div>
 	{% endblock %}
 	<div class="container11"><a class="border-animation" href="/">
       <div class="border-animation__inner">obAna</div></a>
@@ -49,8 +49,8 @@
   <a href=""><i class="fa fa-trash-o" aria-hidden="true"></i>Галерея</a>
 </div>
 </div>
-		</div>
-		<div class="col-md-10 col-lg-10" >
+</div>
+		<div align="center" class="col-md-10 col-lg-10" >
 			{% block content %}
 				Home page content
 			{% endblock %}
