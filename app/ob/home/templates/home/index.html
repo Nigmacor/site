@@ -1,6 +1,23 @@
 {% extends 'templates/base.html' %}
 
-
-{% block content %}
- 	<h1>hello world!</h1>
+{% block title %}
+ 	home
 {% endblock %}
+<container>
+  {% block content %}
+    <h1 class="md-5">Заказы:</h1>
+    {% for order in orders %}
+      <div class="card mb-4">
+        <div class="card-header">
+          {{order.date_pud}}
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{order.title}}</h5>
+          <p class="card-text">{{order.body|truncatewords:15}}</p>
+          <a href="{{ order.get_absolute_url }}" class="btn btn-light">Подробнее</a>
+        </div>
+      </div>
+
+    {% endfor %}
+  {% endblock %}
+</container>
