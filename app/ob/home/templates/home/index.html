@@ -7,12 +7,14 @@
   {% block content %}
     <h1 class="md-5">Заказы:</h1>
     {% for order in orders %}
-      <div class="card">
-        <h5 class="card-header">{{order.title}}</h5>
+      <div class="card mb-4">
+        <div class="card-header">
+          {{order.date_pud}}
+        </div>
         <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">{{order.body}}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">{{order.title}}</h5>
+          <p class="card-text">{{order.body|truncatewords:15}}</p>
+          <a href="{{ order.get_absolute_url }}" class="btn btn-light">Подробнее</a>
         </div>
       </div>
 
