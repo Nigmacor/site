@@ -11,7 +11,9 @@ a {
   color: #7C7C7D !important;
   text-decoration: none
 }
-
+.a_zakaz{
+  text-decoration: none
+}
 .a_menu{
   color: #D8D9DB !important;
   text-decoration: none
