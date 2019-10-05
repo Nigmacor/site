@@ -6,12 +6,11 @@
 
 {% block content %}
   <h1 class="mt-5">
-    {{ order.title }}
+    Tags:
   </h1>
-  <p>
-    {{ order.body }}
-  </p>
-  <p>
-  	{{ order.duration }}
-  </p>
+  {% for tag in tags %}
+    <p>{{ tag.title }}</p>
+  {% endfor %}
+
+  
 {% endblock %}

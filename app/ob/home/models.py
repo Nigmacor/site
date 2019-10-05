@@ -11,10 +11,17 @@ class Orders(models.Model):
 	date_pud = models.DateTimeField(auto_now_add=True)
 	duration = models.DurationField(default=timedelta(days=7))#длительность тендора
 	clicked = models.BooleanField(default=False)
-	#tag
+	tags = models.ManyToManyField('Tag', blank=True, related_name='orders')
 
 	def get_absolute_url(self):
 		return reverse('order_detail_url', kwargs={'id': self.id})
+
+	def __str__(self):
+		return '{}'.format(self.title)
+
+class Tag(models.Model):
+	title = models.CharField(max_length=50)
+	slug = models.SlugField(max_length=50, unique=True)
 
 	def __str__(self):
 		return '{}'.format(self.title)
