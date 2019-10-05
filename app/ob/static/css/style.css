@@ -83,9 +83,6 @@ a {
 .menu { overflow: hidden; border: solid 1px #7A7A7A; width: 100%; border-radius: 3px; opacity: 0.958; }
 .menu :last-child { margin-bottom: 0; }
 .fa { width: 1.25em; margin-right: 0.5em; font-size: 1.25em; text-align: center; }
-
-
-
 .container11 {
   width: 100%;
   margin-left: 1%;
