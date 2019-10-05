@@ -1,36 +1,375 @@
 {% extends 'templates/base.html' %}
-
+{% load static %}
 {% block title %}
  	home
 {% endblock %}
 <container>
-  {% block content %}
-<div style="margin-top: 5%; outline: 2px solid #BEBEBE; width: 50%;">
-<button style="width: 100%;font-family: Helvetica Neue, Arial, sans-serif; color: black;text-decoration: none" class="btn btn-link btn-light" data-toggle="collapse" data-target="#hide">Заказы</button>
-<div class="collapse" id="hide">
-   <table style="width: 100%;">
-   <thead style="background: #EDEEF0">
-    <tr>
-     <td align=center style="width: 15%;"> Дата </td>
-     <td align=center style="width: 15%;"> Пользователь </td>
-     <td align=center style="width: 35%;"> Заголовок </td>
-     <td align=center style="width: 15%;"> Доп.Инфо. </td> 
-     <td align=center style="width: 20%;"> Принять заказ </td> 
-    </tr>
-   </thead>
-    {% for order in orders %}
-   <tbody style="background: #F7F7F7">
-    <tr>
-     <td align=center><p>{{order.date_pud}}</p></td>
-     <td align=center><p>Заказчик</p></td> 
-     <td align=center><p>{{order.title}}</p></td> 
-     <td align=center><p><a href="{{ order.get_absolute_url }}"><button  class="btn btn-outline-dark">Подробнее</button></a></p></td> 
-     <td align=center><p><a href="#"><button class="btn btn-outline-dark">Принять</button></a></p></td>
-    </tr>
-   </tbody>
-    {% endfor %}
-    </table>
+{% block content %}
+ <div class="container-fluid">
+    <div class="row">
+        <div style="min-height: 100vh;" class="col-md-3 col-lg-3">
+        <div class="card" style="width: 100%;margin-top: 10%">
+        <img src="{% static 'img/fizi.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a href="#"><button  class="btn btn-outline-dark">Изменить аватар</button></a>
+          </div>
+        </div>
+        </div>
+        <div align="center" style="margin-top: 3%" class="col-md-9 col-lg-9" >
+           <div align="left">
+           <h5 class="card-title">Пупкин Вася Петрович</h5>
+           <p>Номер телефона: 89278899789</p>
+           <p>Адрес: ул.Пушкина д.Колотушкина</p>
+           </div>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModal">Открыть магазин</button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Магазин</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    много текста
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-outline-dark">Сохранить изменения</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModalLong">Теги</button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Выберите теги</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                  <!-- List Мебельщики -->
+                <div class="panel-heading">Мебельщики</div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        Мягкая мебель
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDefault" name="cushionedfurniture" type="checkbox"/>
+                            <label for="someSwitchOptionDefault" class="label-default"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Столы
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionPrimary" name="tabl" type="checkbox"/>
+                            <label for="someSwitchOptionPrimary" class="label-primary"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Стулья
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionSuccess" name="chair" type="checkbox"/>
+                            <label for="someSwitchOptionSuccess" class="label-success"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Кухни
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionInfo" name="kitchen" type="checkbox"/>
+                            <label for="someSwitchOptionInfo" class="label-info"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Кровати
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionWarning" name="bed" type="checkbox"/>
+                            <label for="someSwitchOptionWarning" class="label-warning"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Шкафы
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="cupboard" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Тумбы
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="stand" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Полки
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="shelf" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Перегородки
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="bulkheads" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Уголки
+                        <div class="material-switch pull-right">
+                            <input id="someSwitchOptionDanger" name="corners" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Горки
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="slides" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Комплектация магазинов
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="storeequipment" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Фасады
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="fasades" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Столешницы
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="countertops" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        трюмо
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="pierum" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                </ul>
+                <!-- List Столяра -->
+                <div class="panel-heading">Столяра</div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        Столы
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDefault" name="table" type="checkbox"/>
+                            <label for="someSwitchOptionDefault" class="label-default"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Стулья
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionPrimary" name="chair" type="checkbox"/>
+                            <label for="someSwitchOptionPrimary" class="label-primary"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Лестницы
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionSuccess" name="stair" type="checkbox"/>
+                            <label for="someSwitchOptionSuccess" class="label-success"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Витражи
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionInfo" name="vitrazhi" type="checkbox"/>
+                            <label for="someSwitchOptionInfo" class="label-info"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Двери
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionWarning" name="doors" type="checkbox"/>
+                            <label for="someSwitchOptionWarning" class="label-warning"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Оконные конструкции
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="window" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Кровати
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="bed" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Шкафы
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="cupboard" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Тумбы
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="stand" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Полки
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="shelf" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Камины
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="fireplase" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Резные элименты декора
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="decorelements" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Деревянные элементы интерьера
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="woodeninteriorelements" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Погонажные изделия
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="moldeditems" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Художественный паркет
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="artparquet" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Порталы
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="portals" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Доска пола, вагонка, плинтус(на заказ)
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="floorboardliningplinth" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Массив дерева (на заказ)
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="solidwood" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Браширование (Старение дерева)
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="booking" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        трюмо
+                        <div class="material-switch pull-right">
+                            <input value="true" id="someSwitchOptionDanger" name="pierum" type="checkbox"/>
+                            <label for="someSwitchOptionDanger" class="label-danger"></label>
+                        </div>
+                    </li>
+                </ul>
+
+                  </div>
+                  
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-outline-dark">Сохранить изменения</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModalCenter">Стать специалистом</button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Исполнитель</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                   мало текста
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-outline-dark">Сохранить изменения</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top: 1%; outline: 2px solid #BEBEBE; width: 100%;">
+                <button style="width: 100%;font-family: Helvetica Neue, Arial, sans-serif; color: black;text-decoration: none" class="btn btn-link btn-light" data-toggle="collapse" data-target="#hide">Заказы</button>
+                <div class="collapse layer" id="hide">
+                   <table style="width: 100%;">
+                   <thead style="background: #EDEEF0">
+                    <tr>
+                     <td align=center style="width: 15%;"> Дата </td>
+                     <td align=center style="width: 15%;"> Пользователь </td>
+                     <td align=center style="width: 35%;"> Заголовок </td>
+                     <td align=center style="width: 15%;"> Доп.Инфо. </td> 
+                     <td align=center style="width: 20%;"> Принять заказ </td> 
+                    </tr>
+                   </thead>
+                    {% for order in orders %}
+                   <tbody style="background: #F7F7F7">
+                    <tr>
+                     <td align=center><p>{{order.date_pud}}</p></td>
+                     <td align=center><p>Заказчик</p></td> 
+                     <td align=center><p>{{order.title}}</p></td> 
+                     <td align=center><p><a href="{{ order.get_absolute_url }}"><button  class="btn btn-outline-dark">Подробнее</button></a></p></td> 
+                     <td align=center><p><a href="#"><button class="btn btn-outline-dark">Принять</button></a></p></td>
+                    </tr>
+                   </tbody>
+                    {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-</div>
-  {% endblock %}
+{% endblock %}
 </container>

@@ -1,0 +1,130 @@
+{% extends 'templates/base.html' %}
+{% load static %} 
+
+{% block content %}
+<div style="outline: 2px solid #979797;margin-top: 2%">
+   <h3 style="outline: 2px solid #979797;" align=left>Магазин</h3>
+    <table style="width: 100%;">
+       <thead style="background: #EDEEF0">
+        <tr>
+         <td align=center style="width: 15%;"> Дата </td>
+         <td align=center style="width: 10%;"> Пользователь </td>
+         <td align=center style="width: 40%;"> Заголовок </td>
+         <td align=center style="width: 15%;"> Доп.Инфо. </td>
+         <td align=center style="width: 10%;"> Сообщений </td> 
+         <td align=center style="width: 10%;"> Просмотров </td> 
+        </tr>
+       </thead>
+       <tbody style="background: #F7F7F7">
+        <tr>
+         <td align=center><p>11.11.11</p></td>
+         <td align=center><p>Тот кто задал вопрос</p></td> 
+         <td align=center><p>Трындец</p></td> 
+         <td align=center><p><a href="{{ order.get_absolute_url }}"><button  class="btn btn-outline-dark">Подробнее</button></a></p></td>
+         <td align=center><p>12</p></td> 
+         <td align=center><p>88000</p></td>  
+        </tr>
+       </tbody>
+    </table>
+</div>
+<div style="outline: 2px solid #979797;margin-top: 2%">
+   <h3 style="outline: 2px solid #979797;" align=left>Проектировщики</h3>
+    <table style="width: 100%;">
+       <thead style="background: #EDEEF0">
+        <tr>
+         <td align=center style="width: 15%;"> Дата </td>
+         <td align=center style="width: 10%;"> Пользователь </td>
+         <td align=center style="width: 40%;"> Заголовок </td>
+         <td align=center style="width: 15%;"> Доп.Инфо. </td>
+         <td align=center style="width: 10%;"> Сообщений </td> 
+         <td align=center style="width: 10%;"> Просмотров </td> 
+        </tr>
+       </thead>
+       <tbody style="background: #F7F7F7">
+        <tr>
+         <td align=center><p>11.11.11</p></td>
+         <td align=center><p>Тот кто задал вопрос</p></td> 
+         <td align=center><p>Трындец</p></td> 
+         <td align=center><p><a href="{{ order.get_absolute_url }}"><button  class="btn btn-outline-dark">Подробнее</button></a></p></td>
+         <td align=center><p>12</p></td> 
+         <td align=center><p>88000</p></td>  
+        </tr>
+       </tbody>
+    </table>
+</div>
+<div style="outline: 2px solid #979797;margin-top: 2%">
+   <h3 style="outline: 2px solid #979797;" align=left>Дизайнеры</h3>
+    <table style="width: 100%;">
+       <thead style="background: #EDEEF0">
+        <tr>
+         <td align=center style="width: 15%;"> Дата </td>
+         <td align=center style="width: 10%;"> Пользователь </td>
+         <td align=center style="width: 40%;"> Заголовок </td>
+         <td align=center style="width: 15%;"> Доп.Инфо. </td>
+         <td align=center style="width: 10%;"> Сообщений </td> 
+         <td align=center style="width: 10%;"> Просмотров </td> 
+        </tr>
+       </thead>
+       <tbody style="background: #F7F7F7">
+        <tr>
+         <td align=center><p>11.11.11</p></td>
+         <td align=center><p>Тот кто задал вопрос</p></td> 
+         <td align=center><p>Трындец</p></td> 
+         <td align=center><p><a href="{{ order.get_absolute_url }}"><button  class="btn btn-outline-dark">Подробнее</button></a></p></td>
+         <td align=center><p>12</p></td> 
+         <td align=center><p>88000</p></td>  
+        </tr>
+       </tbody>
+    </table>
+</div>
+<div style="outline: 2px solid #979797;margin-top: 2%">
+   <h3 style="outline: 2px solid #979797;" align=left>Мебельщики</h3>
+    <table style="width: 100%;">
+       <thead style="background: #EDEEF0">
+        <tr>
+         <td align=center style="width: 15%;"> Дата </td>
+         <td align=center style="width: 10%;"> Пользователь </td>
+         <td align=center style="width: 40%;"> Заголовок </td>
+         <td align=center style="width: 15%;"> Доп.Инфо. </td>
+         <td align=center style="width: 10%;"> Сообщений </td> 
+         <td align=center style="width: 10%;"> Просмотров </td> 
+        </tr>
+       </thead>
+       <tbody style="background: #F7F7F7">
+        <tr>
+         <td align=center><p>11.11.11</p></td>
+         <td align=center><p>Тот кто задал вопрос</p></td> 
+         <td align=center><p>Трындец</p></td> 
+         <td align=center><p><a href="{{ order.get_absolute_url }}"><button  class="btn btn-outline-dark">Подробнее</button></a></p></td>
+         <td align=center><p>12</p></td> 
+         <td align=center><p>88000</p></td>  
+        </tr>
+       </tbody>
+    </table>
+</div>
+<div style="outline: 2px solid #979797;margin-top: 2%">
+   <h3 style="outline: 2px solid #979797;" align=left>Столяра</h3>
+    <table style="width: 100%;">
+       <thead style="background: #EDEEF0">
+        <tr>
+         <td align=center style="width: 15%;"> Дата </td>
+         <td align=center style="width: 10%;"> Пользователь </td>
+         <td align=center style="width: 40%;"> Заголовок </td>
+         <td align=center style="width: 15%;"> Доп.Инфо. </td>
+         <td align=center style="width: 10%;"> Сообщений </td> 
+         <td align=center style="width: 10%;"> Просмотров </td> 
+        </tr>
+       </thead>
+       <tbody style="background: #F7F7F7">
+        <tr>
+         <td align=center><p>11.11.11</p></td>
+         <td align=center><p>Тот кто задал вопрос</p></td> 
+         <td align=center><p>Трындец</p></td> 
+         <td align=center><p><a href="{{ order.get_absolute_url }}"><button  class="btn btn-outline-dark">Подробнее</button></a></p></td>
+         <td align=center><p>12</p></td> 
+         <td align=center><p>88000</p></td>  
+        </tr>
+       </tbody>
+    </table>
+</div>
+{% endblock %}

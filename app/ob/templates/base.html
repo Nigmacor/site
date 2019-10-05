@@ -17,7 +17,7 @@
 		{% endblock %}
 	</title>
 </head>
-<body style="background:url({% static 'img/fon.jpg' %});background-attachment: fixed;">
+<body>
 	<header>
 		{% block autoresation %}
 		<div style="float:right;margin-top: 2%;margin-right: 2%">
@@ -41,7 +41,7 @@
 							<a class="a_menu" href="{% url 'shop' %}"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Магазин</a>
 						</div>
 						<div class="fancy-hover">
-							<a class="a_menu" href=""><i class="fa fa-comments-o" aria-hidden="true"></i>Форум</a>
+							<a class="a_menu" href="{% url 'forum_url' %}"><i class="fa fa-comments-o" aria-hidden="true"></i>Форум</a>
 						</div>
 						<div class="fancy-hover">
 							<a class="a_menu" href=""><i class="fa fa-globe" aria-hidden="true"></i>О нас</a>
