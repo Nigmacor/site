@@ -2,5 +2,13 @@
 {% load static %} 
 
 {% block content %}
-
+<p>{{post.date_pud}}</p>
+<p>{{post.user}}</p>
+<h3><p>{{post.title}}</p></h3>
+<p>{{post.body}}</p>
+<div class="form-group">
+    <label for="exampleFormControlTextarea1">Текст</label>
+    <textarea style="width: 55%;" name="area1" cols="40" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+<button type="submit" class="btn btn-outline-dark">Создать тему</button>
 {% endblock %}
