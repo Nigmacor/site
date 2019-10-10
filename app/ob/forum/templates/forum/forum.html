@@ -33,7 +33,7 @@ Forum
                  <td align=center><p>{{post.date_pud}}</p></td>
                  <td align=center><p>{{post.user}}</p></td> 
                  <td align=center><p>{{post.title}}</p></td> 
-                 <td align=center><a href=""><button class="btn btn-outline-dark">Подробнее</button></a></td>
+                 <td align=center><a href="{{ post.get_absolute_url }}"><button class="btn btn-outline-dark">Подробнее</button></a></td>
                  <td align=center><p>{{post.massenge}}</p></td> 
                  <td align=center><p>{{post.views}}</p></td>  
                 </tr>
