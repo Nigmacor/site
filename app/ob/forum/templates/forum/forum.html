@@ -1,8 +1,10 @@
 {% extends 'templates/base.html' %}
 {% load static %} 
+
 {% block title %}
 Forum
 {% endblock %}
+
 {% block content %}
 <div class="container-fluid">
 <div class="row">
@@ -10,7 +12,7 @@ Forum
         <div style="outline: 2px solid #979797;margin-top: 2%">
           <div style="outline: 2px solid #979797;">
             <div style="position:relative;float: left">
-                <h3>Магазин</h3>
+                <h3>Магазины</h3>
             </div>
             <div style="position:relative;float: right">
                 <a href="{% url 'forum_list_url' %}"><button type="button" class="btn btn-outline-secondary">Создать новую тему</button></a>
@@ -117,12 +119,12 @@ Forum
             <table style="width: 100%;">
                <thead style="background: #EDEEF0">
                 <tr>
-                 <td align=center style="width: 15%;"> Дата </td>
-                 <td align=center style="width: 10%;"> Пользователь </td>
-                 <td align=center style="width: 40%;"> Заголовок </td>
-                 <td align=center style="width: 15%;"> Доп.Инфо. </td>
-                 <td align=center style="width: 10%;"> Сообщений </td> 
-                 <td align=center style="width: 10%;"> Просмотров </td> 
+                    <td align=center style="width: 15%;"> Дата </td>
+                    <td align=center style="width: 10%;"> Пользователь </td>
+                    <td align=center style="width: 40%;"> Заголовок </td>
+                    <td align=center style="width: 15%;"> Доп.Инфо. </td>
+                    <td align=center style="width: 10%;"> Сообщений </td> 
+                    <td align=center style="width: 10%;"> Просмотров </td>
                 </tr>
                </thead>
                <tbody style="background: #F7F7F7">
