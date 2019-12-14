@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Док</title>
+</head>
+<body>
+  <h1>Привет</h1>
+  {% block content %}
+
+{% if form.errors %}
+  <p>Логин или пароль не верен</p>
+{% endif %}
+
+{% if next %}
+  {% if user.is_authenticated %}
+    <p>Вы не имеете доступ к этой странице через данный аккаунт</p>
+  {% else %}
+    <p>Войдите, чтоб получить доступ к странице</p>
+  {% endif %}
+{% endif %}
+
+<form method="post" >
+{% csrf_token %}
+{{ form.as_p }}
+
+<input type="hidden" name="next" value="{{ next }}" />
+<input type="submit" value="войти" />
+</form>
+
+
+{% endblock %}
+</body>
+</html>

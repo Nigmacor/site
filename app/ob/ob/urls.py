@@ -1,4 +1,4 @@
-"""ob URL Configuration
+"""ygg URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -20,8 +20,6 @@ from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', include('home.urls')),
-    path('', include('home.urls')),
     path('account/', include('account.urls')),
-    path('shop/', include('shop.urls'))
 ]
+#path('', include('shop.urls')),
